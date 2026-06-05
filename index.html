@@ -28,7 +28,8 @@
     background-color: var(--bg-dark);
     background-image: radial-gradient(circle at 50% 0%, #1f2833 0%, #0b0c10 70%);
     color: var(--text-main);
-    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +41,7 @@
     max-width: 900px;
     background: var(--bg-glass);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: 24px; 
     overflow: hidden;
@@ -314,7 +316,17 @@
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
   transform: translateY(-2px);
 }
-  
+
+input[type="number"], button {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 8px; 
+}
+
+
+input[type="number"] {
+  font-size: 16px !important;
+}
 </style>
 </head>
 <body>
