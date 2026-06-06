@@ -1,0 +1,84 @@
+:root {
+    --gold: #d4af37;
+    --felt-green: #0a4f2a;
+    --glass: rgba(17, 17, 17, 0.7);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+
+body {
+    background-color: #111;
+    background-image: radial-gradient(circle, var(--felt-green) 0%, #031c0e 100%);
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#casino-room {
+    width: 100%;
+    max-width: 600px;
+    height: 95dvh;
+    background: var(--glass);
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.player-area { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.badge { background: #000; padding: 5px 15px; border-radius: 20px; border: 1px solid var(--gold); font-weight: bold; }
+
+.hand { display: flex; gap: 10px; height: 120px; }
+
+.table-center { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;}
+
+.deck-area, .play-arena { display: flex; gap: 20px; }
+
+/* Design das Cartas */
+.card {
+    width: 80px;
+    height: 120px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 1px solid #ccc;
+}
+
+.card:hover { transform: translateY(-10px); border-color: var(--gold); }
+
+.card-back { background: repeating-linear-gradient(45deg, #111, #111 10px, var(--gold) 10px, var(--gold) 20px); cursor: default; }
+.card-back:hover { transform: none; }
+
+.card.empty { background: rgba(0,0,0,0.3); border: 2px dashed var(--gold); color: rgba(255,255,255,0.3); font-size: 14px; cursor: default;}
+.card.empty:hover { transform: none; }
+
+.red { color: #d00000; }
+.black { color: #000000; }
+
+.btn-gold {
+    background: linear-gradient(45deg, #b8860b, #d4af37);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-gold:disabled { opacity: 0.5; cursor: not-allowed; filter: grayscale(100%); }

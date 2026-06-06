@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truco VIP - Royal Cassino</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1">
+    <link rel="stylesheet" href="truco.css">
+</head>
+<body>
+    <div id="casino-room">
+        <div class="player-area bot-area">
+            <div class="badge">🤖 Máquina: <span id="score-bot">0</span></div>
+            <div id="bot-hand" class="hand">
+                </div>
+        </div>
+
+        <div class="table-center">
+            <div class="deck-area">
+                <div class="card card-back"></div>
+                <div id="vira-card" class="card empty">VIRA</div>
+            </div>
+            
+            <div class="play-arena">
+                <div id="bot-play" class="card empty"></div>
+                <div id="player-play" class="card empty"></div>
+            </div>
+            
+            <div class="actions">
+                <button id="btn-truco" class="btn-gold" disabled>GRITAR TRUCO</button>
+            </div>
+        </div>
+
+        <div class="player-area user-area">
+            <div class="badge">👤 Você: <span id="score-player">0</span></div>
+            <div id="player-hand" class="hand">
+                </div>
+        </div>
+    </div>
+
+    <script src="truco.js"></script>
+</body>
+</html>
